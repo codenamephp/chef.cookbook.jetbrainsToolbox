@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: debian-10
+
+suites:
+  - name: default
+    run_list:
+      - recipe[%%COOKBOOK_NAME%%::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:

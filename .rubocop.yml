@@ -1,0 +1,29 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**'
+    - 'bundler/**'
+
+Layout/LineLength:
+  Max: 160
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - 'test/smoke/**/*.rb'
+    - 'resources/**/*.rb'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - 'test/smoke/**/*.rb'
+
+Metrics/MethodLength:
+  Max: 15
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
