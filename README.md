@@ -1,40 +1,31 @@
 # Chef Cookbook
-%%BUILD_BADGE%%
+[![CI](https://github.com/codenamephp/chef.cookbook.jetbrainsToolbox/actions/workflows/ci.yml/badge.svg)](https://github.com/codenamephp/chef.cookbook.jetbrainsToolbox/actions/workflows/ci.yml)
 
-To get started, lookup all the %%PLACEHOLDERS%% and replace them with the actual values.
+## Resources
 
-To get started with the cookbook, use chef generate -I apachev2 -C CodenamePHP [recipe, resource, ...]
+### Jetbrains Toolbox App
+The `codenamephp_jetrbains_toolbox_app` resource installs or uninstalls the [Jetbrains toolbox][jetbrains_toolbox_url] which can then be used to manage the Jetbrains products.
 
-## Requirements
+#### Actions
+- `:install`: Downloads the toolbox to a shared location and adds an X11 session script that installs the toolbox for the logged in user
+- `:uninstall`: Deletes the shared script and the login script. Already installed apps for the users are not removed
 
-### Supported Platforms
+#### Properties
+- `toolbox_path`: The path where the files are downloaded to, extracted, ..., default: '/usr/share/jetbrains-toolbox'. If you have a custom path you need to provide it as well for the uninstall action.
 
-- Debian Stretch
+#### Examples
+```ruby
+# Minmal parameters
+codenamephp_jetbrains_toolbox_app 'install jetbrains-toolbox'
 
-### Chef
+# Custom path
+codenamephp_jetbrains_toolbox_app 'install jetbrains-toolbox' do
+  toolbox_path '/my/custom/executable/path'
+end
 
-- Chef 15.3+
-
-### Cookbook Depdendencies
-
-## Usage
-
-Add the cookbook to your Berksfile:
-
+# Uninstall
+codenamephp_jetbrains_toolbox_app 'uninstall jetbrains-toolbox' do
+  toolbox_path '/my/custom/executable/path'
+end
 ```
-cookbook '%%COOKBOOK_NAME%%'
-```
-
-Add the cookbook to your runlist, e.g. in a role:
-
-
-```json
-{
-  "name": "default",
-  "chef_type": "role",
-  "json_class": "Chef::Role",
-  "run_list": [
-	  "recipe[%%COOKBOOK_NAME%%]"
-  ]
-}
-```
+[jetbrains_toolbox_url]: https://www.jetbrains.com/toolbox-app/

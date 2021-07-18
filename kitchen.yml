@@ -14,7 +14,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[%%COOKBOOK_NAME%%::default]
+      - recipe[test::default]
     verifier:
       inspec_tests:
         - test/smoke/default
