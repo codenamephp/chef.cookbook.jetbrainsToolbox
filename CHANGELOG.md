@@ -1,11 +1,12 @@
 # Changelog
 
-## [1.0.1](https://github.com/codenamephp/chef.cookbook.jetbrainsToolbox/tree/1.0.1) (2021-11-08)
+## [1.0.1](https://github.com/codenamephp/chef.cookbook.jetbrainsToolbox/tree/1.0.1) (2021-12-29)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.jetbrainsToolbox/compare/1.0.0...1.0.1)
 
 **Merged pull requests:**
 
+- Bump bobheadxi/deployments from 0.6.1 to 0.6.2 [\#6](https://github.com/codenamephp/chef.cookbook.jetbrainsToolbox/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump bobheadxi/deployments from 0.6.0 to 0.6.1 [\#5](https://github.com/codenamephp/chef.cookbook.jetbrainsToolbox/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump tubone24/update\_release from 1.2.0 to 1.3.1 [\#4](https://github.com/codenamephp/chef.cookbook.jetbrainsToolbox/pull/4) ([dependabot[bot]](https://github.com/apps/dependabot))
 
